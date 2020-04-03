@@ -1,0 +1,1 @@
+This is a personal website project for COSC52-S20@Dartmouth.
