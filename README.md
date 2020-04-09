@@ -1,6 +1,6 @@
 This is a personal website project for COSC52-S20@Dartmouth.
 
-The website I was trying to mimic is [monday.com](www.monday.com).
+The website I was trying to mimic is [monday.com](http://www.monday.com).
 
 The four main features are all included.
 
