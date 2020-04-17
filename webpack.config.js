@@ -1,10 +1,15 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-tabs */
 const autoprefixer = require('autoprefixer');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const env = process.env.NODE_ENV || 'development';
 // set to 'production' or 'development' in your env
 
-const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { loader: 'style-loader'}
+const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { loader: 'style-loader' };
 
 module.exports = {
   mode: env,
@@ -16,57 +21,57 @@ module.exports = {
   module: {
     rules: [
 	  {
-		test: /\.js$/,
-		exclude: /node_modules/,
-		use: [ //here's the part you want
-          { loader: 'babel-loader'},
-		  { loader: 'eslint-loader'}
-		]
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel-loader' },
+		  { loader: 'eslint-loader' },
+        ],
 	  },
 	  {
-		test: /\.s?css/,
-		use: [
+        test: /\.s?css/,
+        use: [
 		  finalCSSLoader,
 		  {
-			loader: 'css-loader',
-			options: {
+            loader: 'css-loader',
+            options: {
 			  sourceMap: true,
-			},
+            },
 		  },
 		  {
-			loader: 'postcss-loader',
-			options: {
+            loader: 'postcss-loader',
+            options: {
 			  plugins: () => [autoprefixer()],
 			  sourceMap: true,
-			},
+            },
 		  },
 		  {
-			loader: 'sass-loader',
-			options: {
+            loader: 'sass-loader',
+            options: {
 			  sourceMap: true,
-			},
+            },
 		  },
-		],
+        ],
 	  },
 	  {
-		test: /\.(jpe?g|png|gif|svg)$/,
-		use: [
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
 		  {
-			loader: 'file-loader',
-			options: {
+            loader: 'file-loader',
+            options: {
 			  useRelativePath: true,
 			  name: '[name].[ext]',
-			},
+            },
 		  },
-		],
+        ],
 	  },
     ],
   },
   plugins: [
-	new MiniCssExtractPlugin(),
-	new HtmlWebpackPlugin({
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
 	  template: './src/index.html',
 	  filename: './index.html',
-	}),
+    }),
   ],
-}
+};
