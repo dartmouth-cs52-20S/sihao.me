@@ -1,8 +1,0 @@
-{
-  "name": "starterpack-sh51",
-  "version": "1.0.0",
-  "main": "main/index.js",
-  "repository": "git@github.com:dartmouth-cs52-20S/starterpack-sh51.git",
-  "author": "Sihao Huang <huangsihao@cs.dartmouth.edu>",
-  "license": "MIT",
-}
