@@ -1,15 +1,20 @@
 body, html {
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#000000 100%);
+    background: linear-gradient(to bottom, #B2DFDB 0%,#009688 40%,#00796B 100%);
     height: 100%;
-  }
+	display: flex;
+}
 
   #subme {
-    background-color: #ffffff;
+    background-color: rgba(1, 1, 1, 0.2);
+	padding: 5px;
+	width: 160px;
+	height: 50px;
+	border-radius: 15px;
   }
 
   .logo {
-    background-image: url('img/dance.gif');
+    background-image: url('img/774(2).png');
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
