@@ -13,10 +13,12 @@ const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { 
 
 module.exports = {
   mode: env,
+  output: { publicPath: '/' },
   entry: ['./src'], // this is where our app lives
   devtool: 'source-map', // this enables debugging with source in chrome devtools
   devServer: {
     hot: true,
+	historyApiFallback: true,
   },
   module: {
     rules: [
@@ -72,6 +74,10 @@ module.exports = {
     new HtmlWebpackPlugin({
 	  template: './src/index.html',
 	  filename: './index.html',
+    }),
+	new HtmlWebpackPlugin({
+	  template: './src/index.html',
+	  filename: './200.html',
     }),
   ],
 };
