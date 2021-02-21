@@ -38,7 +38,7 @@ const Nav = (props) => {
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/counter">counter</NavLink></li>
         <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2077</NavLink></li>
+        <li><NavLink to="/test/id2">test id2012</NavLink></li>
         <li><NavLink to="/netherland">netherland</NavLink></li>
       </ul>
     </nav>
