@@ -42,9 +42,9 @@ module.exports = {
 		  },
 		  {
             loader: 'postcss-loader',
-            options: {
-			  plugins: () => [autoprefixer()],
-			  sourceMap: true,
+		      options: {
+			  postcssOptions: {plugins: () => [autoprefixer()]},
+				  sourceMap: true,
             },
 		  },
 		  {
